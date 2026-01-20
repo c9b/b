@@ -333,6 +333,8 @@ class IntelligentPlayerBot {
    * 🎯 حساب الأولويات
    */
   calculatePriorities(analysis) {
+    const dailyLimit = this.getDailyLimit();
+    
     const priorities = {
       train: 0,
       race: 0,
