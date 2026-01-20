@@ -1,5 +1,5 @@
 services:
-  - type: worker
+  - type: web
     name: intelligent-jockey-bot
     env: node
     plan: free

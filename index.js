@@ -1,5 +1,6 @@
 import { WOLF } from 'wolf.js';
 import IntelligentPlayerBot from './intelligent-player-bot.js';
+import healthCheck, { updateBotStatus } from './health-check.js';
 import fs from 'fs';
 
 // قراءة ملف .env
@@ -81,6 +82,9 @@ async function main() {
   console.log('🔄 جاري الاتصال...\n');
   await client.login(BOT_EMAIL, BOT_PASSWORD);
   console.log('✅ تم الاتصال!\n');
+  
+  // تحديث حالة البوت
+  updateBotStatus(true, 'Connected to WOLF');
   
   // إنشاء البوت الذكي
   const bot = new IntelligentPlayerBot(client, TARGET_BOT_ID);
