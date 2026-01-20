@@ -1,0 +1,18 @@
+services:
+  - type: worker
+    name: intelligent-jockey-bot
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: BOT_EMAIL
+        sync: false
+      - key: BOT_PASSWORD
+        sync: false
+      - key: TARGET_BOT_ID
+        value: 80277459
+      - key: PERSONALITY_TYPE
+        value: balanced

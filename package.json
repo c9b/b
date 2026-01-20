@@ -1,0 +1,26 @@
+{
+  "name": "intelligent-jockey-bot",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Intelligent bot for WOLF Jockey game - plays naturally like a human",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "postinstall": "node setup-protection.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "wolf.js": "2.7.9"
+  },
+  "keywords": [
+    "wolf",
+    "jockey",
+    "bot",
+    "game",
+    "automation"
+  ],
+  "author": "",
+  "license": "MIT"
+}
